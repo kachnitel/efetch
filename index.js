@@ -35,15 +35,15 @@ export class Connection {
 
   /**
    * @param {string} path
-   * @param {string} key
+   * @param {string} name Name of the form field
    * @param {object} file Result from Expo ImagePicker/ImageManipulator
    */
-  postFile = (path, key, file) => {
+  postFile = (path, name, file) => {
     let uriParts = file.uri.split('.')
     let fileType = uriParts[uriParts.length - 1]
 
     let formData = new FormData()
-    formData.append(key, {
+    formData.append(name, {
       ...file,
       name: `photo.${fileType}`,
       type: Mime.getType(fileType)
@@ -137,7 +137,7 @@ export class Connection {
   }
 
   /**
-   * Set headers for all requests
+   * Set default headers for all requests
    *
    * @param {Object} headers
    * @memberof Connection
