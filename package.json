@@ -1,0 +1,29 @@
+{
+  "name": "@kachnitel/efetch",
+  "version": "0.0.1",
+  "description": "Simple fetch wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kachnitel/efetch.git"
+  },
+  "keywords": [
+    "fetch",
+    "rest",
+    "api",
+    "connection"
+  ],
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/kachnitel/efetch/issues"
+  },
+  "homepage": "https://github.com/kachnitel/efetch#readme",
+  "dependencies": {
+    "mime": "^2.4.7",
+    "qs": "^6.9.4"
+  }
+}
