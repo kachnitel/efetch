@@ -28,4 +28,13 @@ import * as ImagePicker from 'expo-image-picker'
 
 let imageObject = await ImagePicker.launchImageLibraryAsync()
 connection.postFile(`api/users/${id}/picture`, 'picture', imageObject)
+
+// Handling errors
+let signin
+try {
+  signin = await ApiConnection.post('signin', { ... })
+} catch (error) {
+  console.log('Error signing in', JSON.stringify(error.data.response.status))
+  return
+}
 ```
